@@ -1,5 +1,5 @@
 import React from 'react';
-import {  FaTimes , FaRegCircle  } from 'react-icons/fa';
+import {  FaTimes, FaRegCircle, FaLinkedin , FaGithub } from 'react-icons/fa';
 
 function Icon({ name  }) {
     switch (name) {
@@ -8,6 +8,12 @@ function Icon({ name  }) {
     
         case "cross":
             return <FaTimes className="icons" /> ;
+
+        case "linkedin":
+            return <FaLinkedin className="icons" /> ;
+
+        case "github":
+            return <FaGithub className="icons" /> ;
     
         default:
             return <span/> ;

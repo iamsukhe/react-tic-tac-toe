@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import {  Container, Button, Col, Row } from "reactstrap"
+import { Container, Button, Col, Row } from "reactstrap"
 import "./App.css"
 
 const itemArray = new Array(9).fill("empty");
@@ -71,7 +71,7 @@ function App() {
   }
 
   return (
-    <Container className="p-5" >
+    <Container className="p-4" >
       <ToastContainer position="bottom-center" />
       <Row>
         <Col md={6} className="offset-md-3 col" >
@@ -81,7 +81,7 @@ function App() {
             </h1>
           </div>
           {winMessage ? (
-            <div className="mb-2 mt-2">
+            <div className="mb-2 ">
               <h1 className="text-success text-uppercase text-center" >
                 {winMessage}
               </h1>
@@ -109,6 +109,17 @@ function App() {
               })
             }
           </div>
+
+          <footer>
+
+            <div className="mb-2 mt-5 d-flex">
+              <p>Sukhvinder Singh</p>
+              <span className="ms-2" ><a href="https://www.linkedin.com/in/sukhvinder-singh-4029a8190" target="_blank" > <Icon name="linkedin" /></a></span>
+              <span className="ms-2" ><a href="https://github.com/iamsukhe" target="_blank" > <Icon name="github" /></a></span>
+            </div>
+
+          </footer>
+
         </Col>
       </Row>
     </Container>
