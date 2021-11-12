@@ -15,7 +15,7 @@ const itemArray = new Array(9).fill("empty");
 function App() {
 
   const [isCross, setIsCross] = useState(false);
-  const [updateState, setUpdateState] = useState(false);
+  const [ , setUpdateState] = useState(false);
   const [winMessage, setWinMessage] = useState("");
 
   const reloadGame = () => {
@@ -103,7 +103,7 @@ function App() {
             {
               itemArray.map((item, index) => {
                 return (
-                  <div className="block" id={`block_${index}`} onClick={() => chnageItem(index)} >
+                  <div key={index} className="block" id={`block_${index}`} onClick={() => chnageItem(index)} >
                     <Icon name={item} />
                   </div >)
               })
@@ -114,8 +114,8 @@ function App() {
 
             <div className="mb-2 mt-5 d-flex">
               <p>Sukhvinder Singh</p>
-              <span className="ms-2" ><a href="https://www.linkedin.com/in/sukhvinder-singh-4029a8190" target="_blank" > <Icon name="linkedin" /></a></span>
-              <span className="ms-2" ><a href="https://github.com/iamsukhe" target="_blank" > <Icon name="github" /></a></span>
+              <span className="ms-2" ><a href="https://www.linkedin.com/in/sukhvinder-singh-4029a8190"  > <Icon name="linkedin" /></a></span>
+              <span className="ms-2" ><a href="https://github.com/iamsukhe"  > <Icon name="github" /></a></span>
             </div>
 
           </footer>
